@@ -1,0 +1,50 @@
+.custom-navbar {
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1030; /* Ensures it is above other elements */
+}
+
+.custom-navbar.sticky-top {
+  position: sticky;
+  top: 0;
+}
+
+.nav-link {
+  margin-right: 15px;
+  position: relative;
+  padding: 8px 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #007bff;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.brand-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #343a40;
+  transition: color 0.3s ease;
+}
+
+.brand-name:hover {
+  color: #007bff;
+}

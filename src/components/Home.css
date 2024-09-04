@@ -1,0 +1,178 @@
+/* General Container Styling */
+.home-container {
+  padding: 0;
+  background-color: #f0f4f8; /* Light background color for the whole page */
+}
+
+/* Hero Section Styling */
+.hero-section {
+  position: relative;
+  background: url('https://github.com/briancodex/react-website-v1/blob/starter/public/images/img-home.jpg?raw=true') center center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 50px 20px;
+}
+
+.hero-title {
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #007bff, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  color: #ddd;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hero-button {
+  background-color: #6610f2;
+  border-color: #6610f2;
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #007bff;
+  transform: translateY(-3px);
+}
+
+/* Features Section Styling */
+.features-section {
+  padding: 50px 0;
+  background: linear-gradient(to right, #ffffff, #f1f1f1);
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #ffffff 50%, #e9ecef 50%);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+  transform: scale(1.1);
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  color: #343a40;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Testimonials Section Styling */
+.testimonials-section {
+  background: #f9f9f9;
+  padding: 50px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #343a40;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #6610f2;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.testimonials-text {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Call to Action Section Styling */
+.cta-section {
+  background: #343a40;
+  color: white;
+  padding: 60px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cta-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.cta-button {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 1.2rem;
+  padding: 10px 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #6610f2;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .feature-title {
+    font-size: 1.3rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+}
