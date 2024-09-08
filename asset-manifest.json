@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/club-psits/static/css/main.d9927fc5.css",
-    "main.js": "/club-psits/static/js/main.09971217.js",
+    "main.js": "/club-psits/static/js/main.d9681a59.js",
     "index.html": "/club-psits/index.html",
     "main.d9927fc5.css.map": "/club-psits/static/css/main.d9927fc5.css.map",
-    "main.09971217.js.map": "/club-psits/static/js/main.09971217.js.map"
+    "main.d9681a59.js.map": "/club-psits/static/js/main.d9681a59.js.map"
   },
   "entrypoints": [
     "static/css/main.d9927fc5.css",
-    "static/js/main.09971217.js"
+    "static/js/main.d9681a59.js"
   ]
 }
