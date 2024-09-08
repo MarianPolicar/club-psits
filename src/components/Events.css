@@ -36,19 +36,30 @@
 .slideshow-container {
   position: relative;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  height: 100vh; /* Full viewport height */
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+}
+/* Add a subtle overlay to the slideshow */
+.slideshow-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay for contrast */
+  z-index: 1;
+}
+.slideshow-image {
+  z-index: 0;
 }
 
 .slideshow-image {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100vh;
+  object-fit: cover; /* Ensure the image covers the full area */
 }
-
 .prev-button,
 .next-button {
   position: absolute;
@@ -57,23 +68,26 @@
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 15px;
   cursor: pointer;
   border-radius: 50%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.5rem;
+  z-index: 2;
 }
-
 .prev-button:hover,
 .next-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
 }
 
+
 .prev-button {
-  left: 10px;
+  left: 20px;
 }
 
 .next-button {
-  right: 10px;
+  right: 20px;
 }
 
 /* Event Card Styling */
@@ -81,16 +95,15 @@
   background: white;
   border: none;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   height: 100%;
 }
 
 .event-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* Enhanced hover effect */
 }
-
 .event-image {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -114,17 +127,26 @@
 }
 
 .event-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem; /* Larger title */
   font-weight: 700;
   color: #335c67;
 }
 
 .event-details {
-  font-size: 0.9rem;
+  font-size: 1rem; /* Larger font for details */
   color: #6c757d;
 }
 
 .event-description {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #495057;
+}
+
+/* Add smooth transition on hover for images */
+.event-image {
+  transition: transform 0.5s ease-in-out;
+}
+
+.event-image:hover {
+  transform: scale(1.05); /* Zoom-in effect */
 }

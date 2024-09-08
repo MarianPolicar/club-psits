@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
-import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import './Contact.css';
 
 function Contact() {
@@ -38,6 +38,23 @@ function Contact() {
           Send Message
         </Button>
       </Form>
+
+      {/* Contact Information */}
+      <div className="contact-info">
+        <h4>Contact Information:</h4>
+        <p><FaPhone /> +639162019871</p>
+        <p><FaMapMarkerAlt /> Datu Ingkal Street, Kidapawan City</p>
+      </div>
+
+      {/* FAQs Section */}
+      <div className="contact-faq">
+        <h4>Frequently Asked Questions</h4>
+        <ul>
+          <li><strong>How long will it take to get a reply?</strong> We usually respond within 24 hours.</li>
+          <li><strong>Can I visit your office?</strong> Yes, we're open Monday to Friday, 9 AM to 5 PM.</li>
+          <li><strong>Do you offer phone support?</strong> Yes, you can reach us at +63916201987 during office hours.</li>
+        </ul>
+      </div>
 
       <div className="contact-social">
         <h4>Connect with Us:</h4>
